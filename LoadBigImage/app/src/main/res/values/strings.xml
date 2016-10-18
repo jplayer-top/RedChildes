@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LoadBigImage</string>
+    <string name="loadBigImage">加载大图片</string>
+</resources>
