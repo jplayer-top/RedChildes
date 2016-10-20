@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">loadfile2location</string>
+    <string name="loadpath">http://192.168.16.22:8080/xxx.apk</string>
+    <string name="bt_load">点击下载</string>
+</resources>
