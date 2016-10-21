@@ -1,1 +1,3 @@
-include ':getmd5', ':endcall'
+include ':defineview'
+
+
