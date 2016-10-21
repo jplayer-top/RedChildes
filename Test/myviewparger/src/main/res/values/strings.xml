@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">myViewParger</string>
+    <string name="tv_desc">图片的描述</string>
+</resources>
