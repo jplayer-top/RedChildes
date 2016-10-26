@@ -1,0 +1,12 @@
+<com.oblivion.ui.SlideMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sliding_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 在SlidingMenu中的索引0 -->
+    <include layout="@layout/menu" />
+
+    <!-- 在SlidingMenu中的索引1 -->
+    <include layout="@layout/main" />
+
+</com.oblivion.ui.SlideMenu>
