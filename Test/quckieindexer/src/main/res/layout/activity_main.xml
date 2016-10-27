@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oblivion.quckieindexer.MainActivity">
+
+    <TextView
+        android:text="A"
+        android:visibility="gone"
+        android:textColor="#33f1f1f1"
+        android:gravity="center"
+        android:textSize="70sp"
+        android:id="@+id/tv_show"
+        android:layout_width="150dp"
+        android:layout_height="100sp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_index"
+        />
+
+    <ListView
+        android:id="@+id/lv_names"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    <com.oblivion.ui.QuckieIndex
+        android:id="@+id/qiv_items"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#440000ff"></com.oblivion.ui.QuckieIndex>
+
+
+</RelativeLayout>
