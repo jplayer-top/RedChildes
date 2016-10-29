@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oblivion.ui.SlideClean xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/sc_clean"
+    tools:context="com.oblivion.slideclean.MainActivity">
+
+    <include layout="@layout/right" />
+    <include layout="@layout/main" />
+
+</com.oblivion.ui.SlideClean>
