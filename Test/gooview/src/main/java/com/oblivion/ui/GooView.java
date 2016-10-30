@@ -145,7 +145,7 @@ public class GooView extends View {
 
     private Canvas canvas;
 
-    /**
+      /**
      * 绘图，作画
      *
      * @param canvas
