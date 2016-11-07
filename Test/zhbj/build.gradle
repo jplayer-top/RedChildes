@@ -26,4 +26,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile project(':library')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile project(':tablibrary')
+    compile 'com.android.support:recyclerview-v7:24.2.0'
 }

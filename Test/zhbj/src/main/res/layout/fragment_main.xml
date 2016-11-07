@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
+    <com.oblivion.zhbj.ui.NoScrollViewParger
+        android:id="@+id/vp_main_parger"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.oblivion.zhbj.ui.NoScrollViewParger>
+
+    <RadioGroup
+        android:id="@+id/rg_menus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main界面" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <RadioButton
+            android:id="@+id/rb_main_menu_home"
+            style="@style/main_menus"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_home"
+            android:text="首页"
+            android:textColor="@color/select_red_color" />
+
+        <RadioButton
+            android:id="@+id/rb_main_menu_news"
+            style="@style/main_menus"
+            android:drawableTop="@drawable/selector_news"
+            android:text="信息"
+            android:textColor="@color/select_red_color" />
+
+        <RadioButton
+            android:id="@+id/rb_main_menu_gov"
+            style="@style/main_menus"
+            android:drawableTop="@drawable/selector_gov"
+            android:text="政务"
+            android:textColor="@color/select_red_color" />
+
+        <RadioButton
+            android:id="@+id/rb_main_menu_server"
+            style="@style/main_menus"
+            android:drawableTop="@drawable/selector_smartserver"
+            android:text="服务"
+            android:textColor="@color/select_red_color" />
+
+        <RadioButton
+            android:id="@+id/rb_main_menu_setting"
+            style="@style/main_menus"
+            android:drawableTop="@drawable/selector_setting"
+            android:text="设置"
+            android:textColor="@color/select_red_color" />
+    </RadioGroup>
+</LinearLayout>

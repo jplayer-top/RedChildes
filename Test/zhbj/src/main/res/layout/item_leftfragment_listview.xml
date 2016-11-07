@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/selector_item_news"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:text="新闻"
+        android:textColor="@color/select_item_color"
+        android:textSize="35sp" />
+</LinearLayout>
