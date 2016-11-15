@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 
+import com.oblivion.qqxmpp.domain.Friend;
 import com.oblivion.qqxmpp.fragment.BaseFragment;
 import com.oblivion.qqxmpp.fragment.FriendFragment;
 import com.oblivion.qqxmpp.fragment.TakeFragment;
@@ -86,44 +87,6 @@ public class MainActivity extends FragmentActivity {
         };
         viewpager.setAdapter(adapter);
         viewpager.addOnPageChangeListener(listener);
-        //获取到花名册信息
-        roster = Global.conn.getRoster();
-        //获取到所有的好友组
-        Collection<RosterGroup> groups = roster.getGroups();
-        for (RosterGroup group : groups) {
-            //获取到每个组的好友
-            Collection<RosterEntry> entries = group.getEntries();
-            for (RosterEntry entry : entries) {
-                //已经能拿到数据了
-                System.out.println("name" + entry.getName() + "user" + entry.getUser() + "status" + entry.getStatus());
-            }
-        }
-        /**
-         * 获取列表的更新的Listener
-         */
-        RosterListener rosterListener = new RosterListener() {
-            @Override
-            public void entriesAdded(Collection<String> collection) {
-
-            }
-
-            @Override
-            public void entriesUpdated(Collection<String> collection) {
-                //能监听成功---
-                System.out.println("更新了用户名");
-            }
-
-            @Override
-            public void entriesDeleted(Collection<String> collection) {
-
-            }
-
-            @Override
-            public void presenceChanged(Presence presence) {
-
-            }
-        };
-        roster.addRosterListener(rosterListener);
     }
 
     /**

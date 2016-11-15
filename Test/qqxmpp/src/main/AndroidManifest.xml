@@ -18,10 +18,19 @@
         </activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/notitlt"></activity>
+
+        <service android:name=".server.IMServer"></service>
+        <service android:name=".server.ChatServer"></service>
 
         <provider
             android:name=".provider.ContactProvider"
             android:authorities="com.oblivion.qqxmpp.provider.ContactProvider"></provider>
+        <provider
+            android:name=".provider.ChatProvider"
+            android:authorities="com.oblivion.qqxmpp.provider.ChatProvider"></provider>
     </application>
 
 </manifest>

@@ -5,4 +5,10 @@
     android:background="#55f0f000"
     android:orientation="vertical">
 
+    <ListView
+        android:id="@+id/lv_friends"
+        android:layout_width="match_parent"
+        android:divider="#00f"
+        android:dividerHeight="1dp"
+        android:layout_height="match_parent"></ListView>
 </LinearLayout>

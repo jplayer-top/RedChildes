@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.oblivion.qqxmpp.global.Global;
+import com.oblivion.qqxmpp.server.ChatServer;
+import com.oblivion.qqxmpp.server.IMServer;
 import com.oblivion.qqxmpp.utils.ThreadUtils;
 
 import org.jivesoftware.smack.ConnectionConfiguration;
@@ -65,7 +67,9 @@ public class LoginActivity extends AppCompatActivity {
                     Global.conn = connection;
                     Global.account = account1;
                     Global.pswd = pswd;
-                    startActivity(new Intent(getBaseContext(), MainActivity.class));
+                    startActivity(new Intent(getBaseContext(), MainActivity.class));//开启主页面
+                    startService(new Intent(getBaseContext(), IMServer.class));//开启联系人列表服务，通过内容提供者保存信息
+                    startService(new Intent(getBaseContext(), ChatServer.class));//开启聊天信息的服务
                     finish();
                 } catch (XMPPException e) {
                     e.printStackTrace();

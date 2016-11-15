@@ -5,63 +5,53 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.UriMatcher;
-import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.provider.BaseColumns;
-
-import opensource.jpinyin.PinyinFormat;
-import opensource.jpinyin.PinyinHelper;
+import android.support.annotation.Nullable;
 
 /**
- * Created by oblivion on 2016/11/11.
+ * Created by oblivion on 2016/11/12.
  */
-public class ContactProvider extends ContentProvider {
-    private static final String authorities = "com.oblivion.qqxmpp.provider.ContactProvider";
-    //书写格式，不要写错,是为了给外界调用-----
-    public static final Uri URI = Uri.parse("content://" + authorities + "/contact");
-    //uriMatcher匹配成功后结果
-    private static final int SUCCESS = 0;
-    //表的名称--匹配器能用到
-    private static String tableName = "contact";
-    //创建表的SQL 语句
-    private static final String SQL =
-            "create table contact(_id integer primary key autoincrement,account text,nick text,avatar text,sort text)";
+public class ChatProvider extends ContentProvider {
+    public static final String authority = "com.oblivion.qqxmpp.provider.ChatProvider";
+    //对外提供的URI接口
+    public static final Uri SMS_URI = Uri.parse("content://" + authority + "/sms");
 
-    //匹配器---用来判断匹配是否成功
-    private static UriMatcher uriMatcher = null;
+    // 创建Provider 配置名字 Authority
+    //设计表
+    public static class SMS implements BaseColumns// _id
+    {
+        public static final String FROM_ID = "from_id";// 发送
+        public static final String FROM_NICK = "from_nick";
+        public static final String FROM_AVATAR = "from_avatar";
+        public static final String BODY = "body";
+        public static final String TYPE = "type";// chat
+        public static final String TIME = "time";
+        public static final String STATUS = "status";
+        public static final String UNREAD = "unread";
+        //自定义添加的字段，目的为了方便查找
+        public static final String SESSION_ID = "session_id";
+        public static final String SESSION_NAME = "session_name";
 
-    //静态代码块设定匹配器
-    static {
-        //初始化匹配器
-        uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);//初始状态设定为NO_MATCH;
-        //明白三个参数分别是什么
-        uriMatcher.addURI(authorities, tableName, SUCCESS);
     }
 
-
-    // BaseColumns _id，继承他是为了有自增长的id----表结构--也是外界使用
-    public static class CONTACT_FIELD implements BaseColumns {
-        public static final String ACCOUNT = "account";
-        public static final String NICK = "nick";
-        public static final String AVATAR = "avatar";
-        public static final String SORT = "sort";// 拼音
-    }
-
-    /**
-     * 创建数据库帮助类
-     */
-    private class MyOpenHelper extends SQLiteOpenHelper {
+    public class MyOpenHelper extends SQLiteOpenHelper {
+        /**
+         * 马丹，两个数据库名字一样好像会报错，，好坑----
+         * @param context
+         */
         public MyOpenHelper(Context context) {
-            super(context, "contact.db", null, 1);
+            super(context, "sms.db", null, 1);
         }
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            //创建表
-            db.execSQL(SQL);
+            //在已有的数据库下创建表sms
+            String sql = "create table sms(_id integer primary key autoincrement,from_id text,from_nick text,from_avatar text,body text,time text,status text,unread text,session_id text,session_name text,type text)";
+            db.execSQL(sql);
         }
 
         @Override
@@ -74,9 +64,18 @@ public class ContactProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        //创建帮助类
+        //创建数据库帮助类
         helper = new MyOpenHelper(getContext());
-        return helper == null ? false : true;//判断是否为空，根据判断确定返回值
+        return helper == null ? false : true;
+    }
+
+    private static final String TABLE = "sms";
+    private static UriMatcher uriMatcher;
+    private static final int SUCCESS = 0;
+
+    static {
+        uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+        uriMatcher.addURI(authority, TABLE, SUCCESS);
     }
 
     @Override
@@ -85,7 +84,7 @@ public class ContactProvider extends ContentProvider {
         int update = 0;
         switch (uriMatcher.match(uri)) {
             case SUCCESS://匹配成功
-                update = db.update(tableName, values, selection, selectionArgs);
+                update = db.update(TABLE, values, selection, selectionArgs);
                 getContext().getContentResolver().notifyChange(uri, null);//null是通知所有的观察者
                 break;
         }
@@ -99,8 +98,9 @@ public class ContactProvider extends ContentProvider {
         SQLiteDatabase db = helper.getWritableDatabase();
         switch (uriMatcher.match(uri)) {
             case SUCCESS://匹配成功
-                long id = db.insert("contact", "", values);
+                long id = db.insert(TABLE, "", values);
                 uri = ContentUris.withAppendedId(uri, id);
+                System.out.println(SMS_URI + "----" + uri);
                 getContext().getContentResolver().notifyChange(uri, null);//null是通知所有的观察者
                 break;
         }
@@ -113,7 +113,7 @@ public class ContactProvider extends ContentProvider {
         Cursor cursor = null;
         switch (uriMatcher.match(uri)) {
             case SUCCESS://匹配成功
-                cursor = db.query(tableName, projection, selection, selectionArgs, null, null, sortOrder);
+                cursor = db.query(TABLE, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
         }
         return cursor;
@@ -131,7 +131,7 @@ public class ContactProvider extends ContentProvider {
         int delete = 0;
         switch (uriMatcher.match(uri)) {
             case SUCCESS://匹配成功
-                delete = db.delete(tableName, selection, selectionArgs);
+                delete = db.delete(TABLE, selection, selectionArgs);
                 getContext().getContentResolver().notifyChange(uri, null);//null是通知所有的观察者
                 break;
         }
