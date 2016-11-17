@@ -1,0 +1,19 @@
+[
+    {
+        "outputFile": "D:\\AndroidStudioProjects\\Test\\PagerSlidingTabStrip_Library\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\Test\\PagerSlidingTabStrip_Library\\res\\values\\colors.xml"
+                }
+            }
+        ]
+    }
+]

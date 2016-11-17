@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="21.0.0$Generated" generated="true"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\res"/><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\generated\res\rs\release"/><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\src\release\res"/></dataSet><dataSet config="21.0.0" from-dependency="true" generated-set="21.0.0$Generated"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\res"><file name="background_tab" path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\res\drawable\background_tab.xml" qualifiers="" type="drawable"/><file path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\res\values\attrs.xml" qualifiers=""><declare-styleable name="PagerSlidingTabStrip">
+        <attr format="color" name="pstsIndicatorColor"/>
+        <attr format="color" name="pstsUnderlineColor"/>
+        <attr format="color" name="pstsDividerColor"/>
+        <attr format="dimension" name="pstsIndicatorHeight"/>
+        <attr format="dimension" name="pstsUnderlineHeight"/>
+        <attr format="dimension" name="pstsDividerPadding"/>
+        <attr format="dimension" name="pstsTabPaddingLeftRight"/>
+        <attr format="dimension" name="pstsScrollOffset"/>
+        <attr format="reference" name="pstsTabBackground"/>
+        <attr format="boolean" name="pstsShouldExpand"/>
+        <attr format="boolean" name="pstsTextAllCaps"/>
+        <!--默认时候的字体颜色-->
+        <attr format="color" name="pstsTabTextColor"/>
+        <!--默认时候的字体大小-->
+        <attr format="dimension" name="pstsTabTextSize"/>
+        <!--选中时候的字体颜色-->
+        <attr format="color" name="pstsSelectedTabTextColor"/>
+        <!--选中时候的字体大小-->
+        <attr format="dimension" name="pstsSelectedTabTextSize"/>
+
+    </declare-styleable></file><file path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\res\values\colors.xml" qualifiers=""><color name="background_tab_pressed">#6633B5E5</color></file></source><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\generated\res\rs\release"/><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="D:\AndroidStudioProjects\Test\PagerSlidingTabStrip_Library\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="PagerSlidingTabStrip"><attr format="color" name="pstsIndicatorColor"/><attr format="color" name="pstsUnderlineColor"/><attr format="color" name="pstsDividerColor"/><attr format="dimension" name="pstsIndicatorHeight"/><attr format="dimension" name="pstsUnderlineHeight"/><attr format="dimension" name="pstsDividerPadding"/><attr format="dimension" name="pstsTabPaddingLeftRight"/><attr format="dimension" name="pstsScrollOffset"/><attr format="reference" name="pstsTabBackground"/><attr format="boolean" name="pstsShouldExpand"/><attr format="boolean" name="pstsTextAllCaps"/><attr format="color" name="pstsTabTextColor"/><attr format="dimension" name="pstsTabTextSize"/><attr format="color" name="pstsSelectedTabTextColor"/><attr format="dimension" name="pstsSelectedTabTextSize"/></declare-styleable></configuration></mergedItems></merger>
