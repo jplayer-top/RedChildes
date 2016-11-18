@@ -14,6 +14,8 @@ public class Constants {
      */
     public static final int DEBUGLEVEL = LogUtils.LEVEL_ALL;
     public static final String URL = "http://10.0.3.2:8080/GooglePlayServer/";
+    //http://localhost:8080/GooglePlayServer/image?name=app/com.itheima.www/icon.jpg
+    public static final String ICONURL = URL + "/image?name=";
     private static final String HOME = "首页";
     private static final String APP = "应用";
     private static final String GAME = "游戏";
@@ -21,4 +23,6 @@ public class Constants {
     private static final String SHARE = "推荐";
     private static final String SORT = "分类";
     private static final String ORDER = "排行";
+    //缓存过期时间
+    public static final long DEFAULTCACHETIME = 5 * 60 * 1000;
 }

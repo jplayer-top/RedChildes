@@ -24,5 +24,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile files('libs/butterknife-7.0.1.jar')
-    compile project(':PagerSlidingTabStrip_Library')
+    compile files('libs/okhttp-2.6.0.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/gson-2.2.3.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile(name: 'PagerSlidingTabStrip_Library-release', ext: 'aar')
 }

@@ -6,6 +6,9 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Process;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by oblivion on 2016/11/14.
  */
@@ -14,6 +17,8 @@ public class MyApplication extends Application {
     private static Context context;
     private static Handler mMainHandler;
     private static int mMainThreadId;
+
+    public HashMap<String, String> map = new HashMap<>();
 
     /**
      * 获取上下文

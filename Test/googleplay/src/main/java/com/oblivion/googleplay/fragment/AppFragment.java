@@ -9,12 +9,17 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.oblivion.googleplay.adapter.AppAdapter;
+import com.oblivion.googleplay.adapter.HomeAdapter;
 import com.oblivion.googleplay.base.BaseFragment;
 import com.oblivion.googleplay.base.MyApplication;
 import com.oblivion.googleplay.utils.LogUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -23,6 +28,9 @@ import java.util.Random;
 public class AppFragment extends BaseFragment {
 
 
+    private ListView mListView;
+    private List<String> mLists;
+
     /**
      * 子类返回更新成功且新结果不空的布局
      *
@@ -30,11 +38,10 @@ public class AppFragment extends BaseFragment {
      */
     @Override
     protected View initView() {
-        TextView tv = new TextView(MyApplication.getContext());
-        tv.setText(getClass().getSimpleName());
-        tv.setTextColor(Color.BLUE);        tv.setGravity(Gravity.CENTER);
-
-        return tv;
+//        view = View.inflate(UIUtils.getContext(), R.layout.listview_virtual, null);
+        mListView = new ListView(getContext());
+        mListView.setAdapter(new AppAdapter(mLists));//数据需要写在这儿
+        return mListView;
     }
 
     /**
@@ -53,11 +60,13 @@ public class AppFragment extends BaseFragment {
      */
     @Override
     public int initData() {
-        Random random = new Random();
-        //数据获取一个状态
-        int index = random.nextInt(3);
-        int[] states = new int[]{STATE_EMPTY, STATE_ERROR, STATE_SUCCESS};
+        mLists = new ArrayList<>();
+        for (int i = 0; i < 99; i++) {
+            mLists.add("撩了" + (99 - i) + "个小妹妹");
+        }
         SystemClock.sleep(2000);//模拟耗时操作
-        return states[index];
+        System.out.println(STATE_SUCCESS);
+        return STATE_SUCCESS;
     }
 }
+

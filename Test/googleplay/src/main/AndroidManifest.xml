@@ -3,6 +3,12 @@
     package="com.oblivion.googleplay">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--检查网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!--读写SD卡权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
     <application
         android:name=".base.MyApplication"
         android:allowBackup="true"
