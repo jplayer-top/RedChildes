@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oblivion.rxjavatest.MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/textStyle"
+        android:text="Hello World!" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/textStyle"
+        android:text="Hello World!" />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/textStyle"
+        android:text="Hello World!" />
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/textStyle"
+        android:text="Hello World!" />
+
+</LinearLayout>
