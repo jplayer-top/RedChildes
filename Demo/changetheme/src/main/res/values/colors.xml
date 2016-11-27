@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--/********************* basic   *********************/-->
+    <color name="text_color_basic">#000</color>
+    <color name="text_background_basic">#fff</color>
+    <color name="fragment_background_basic">#FF4081</color>
+    <color name="fragmnet_main_background_basic">#49990000</color>
+    <!--/********************* dark   *********************/-->
+    <color name="text_background_dark">#000</color>
+    <color name="fragmnet_main_background_dark">#0f0</color>
+    <color name="fragment_background_dark">#4081</color>
+    <color name="text_color_dark">#fff</color>
+</resources>

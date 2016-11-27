@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text_color" format="reference"></attr>
+    <attr name="text_background" format="reference"></attr>
+    <attr name="fragment_left_background" format="reference"></attr>
+    <attr name="fragment_main_background" format="reference"></attr>
+</resources>
