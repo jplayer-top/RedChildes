@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/colorRed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="地址列表"
+            android:textSize="25sp"
+
+            android:layout_centerInParent="true"
+            android:textColor="@color/backgroundGrey"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/ib_change_local"
+            android:src="@drawable/go"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_selectlocal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       ></ListView>
+</LinearLayout>

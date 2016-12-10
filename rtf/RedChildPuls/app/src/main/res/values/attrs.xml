@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyTitleBar">
+        <attr name="titleText" format="string"></attr>
+        <attr name="isBackup" format="boolean"></attr>
+        <attr name="isMenu" format="boolean"></attr>
+        <attr name="isFilter" format="boolean"> </attr>
+
+    </declare-styleable>
+</resources>

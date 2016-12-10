@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oblivion.redchildpuls.view.MyTitleBar
+        android:id="@+id/searchresult_mytiltebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:isFilter="true"></com.oblivion.redchildpuls.view.MyTitleBar>
+
+    <RadioGroup
+        android:id="@+id/searchresult_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/searchresult_rb_sales"
+            style="@style/searchresult_style_tab"
+            android:background="@drawable/select_segment_1"
+            android:text="销量" />
+
+        <RadioButton
+            android:id="@+id/searchresult_rb_myprice"
+            style="@style/searchresult_style_tab"
+            android:background="@drawable/select_segment_2"
+            android:text="价格" />
+
+        <FrameLayout
+            android:id="@+id/searchresult_fl_arrow_bg"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/segment_normal_2_bg">
+
+            <ImageView
+                android:background="@android:color/transparent"
+                android:id="@+id/searchresult_iv_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:scaleType="center"
+                android:src="@drawable/arrow1" />
+        </FrameLayout>
+
+        <RadioButton
+            android:id="@+id/searchresult_rb_score"
+            style="@style/searchresult_style_tab"
+            android:background="@drawable/select_segment_2"
+            android:text="好评度" />
+
+        <RadioButton
+            android:id="@+id/searchresult_rb_date"
+            style="@style/searchresult_style_tab"
+            android:background="@drawable/select_segment_3"
+            android:text="上架时间" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/searchresult_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

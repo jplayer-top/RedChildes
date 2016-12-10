@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.LimitbuyActivity">
+
+    <com.oblivion.redchildpuls.view.MyTitleBar
+        android:id="@+id/mtb_limitBuy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleText="限时抢购"
+        >
+
+    </com.oblivion.redchildpuls.view.MyTitleBar>
+
+    <ListView
+        android:id="@+id/lv_limitBuy_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

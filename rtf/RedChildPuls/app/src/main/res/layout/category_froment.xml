@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<com.oblivion.redchildpuls.view.MyTitleBar-->
+        <!--android:id="@+id/btn_back"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--app:isBackup="true"-->
+        <!--app:titleText="分类页面"></com.oblivion.redchildpuls.view.MyTitleBar>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/red">
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:background="@drawable/select_back"
+
+            />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#fff"
+
+           android:layout_gravity="center"
+           android:textSize="20sp"
+
+           android:text="分类页面"
+           />
+    </FrameLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/kong">
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kong"
+            />
+    </RelativeLayout>
+    <ListView
+        android:layout_marginTop="50dp"
+        android:visibility="visible"
+        android:id="@+id/lv1"
+        android:divider="#f00"
+        android:dividerHeight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:layout_marginTop="50dp"
+        android:divider="#f00"
+        android:dividerHeight="1dp"
+        android:visibility="gone"
+        android:id="@+id/lv2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:layout_marginTop="50dp"
+        android:divider="#f00"
+        android:dividerHeight="1dp"
+        android:visibility="gone"
+        android:id="@+id/lv3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

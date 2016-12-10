@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_pay_detail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fd5353"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/iv_back_cart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/cartback" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="结算中心"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+      <!--<include layout="@layout/pay_detial"></include>-->
+<FrameLayout
+    android:layout_below="@+id/ll_pay_detail"
+    android:id="@+id/fl_pay_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></FrameLayout>
+
+</RelativeLayout>

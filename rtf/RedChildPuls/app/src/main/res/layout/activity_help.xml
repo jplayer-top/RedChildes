@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+              android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/return_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/select_back1"
+            android:text="返回"
+            android:textColor="#fff" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="帮助中心"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/frame_more"
+        android:layout_margin="20dp">
+        <TextView
+            android:id="@+id/more_help_shopping"
+            style="@style/more"
+            android:text="购物指南:" />
+        <TextView
+            android:id="@+id/more_help_after"
+            style="@style/more"
+            android:text="售后服务:"/>
+        <TextView
+            android:id="@+id/more_help_dist"
+            style="@style/more"
+            android:text="配送方式:"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/more_help_phone"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_long_normal"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:text="客服电话40000000000000"/>
+    </RelativeLayout>
+</LinearLayout>

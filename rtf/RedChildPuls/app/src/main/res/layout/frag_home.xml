@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e40011">
+        <ImageView
+            android:src="@drawable/logo_main"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/backgroundGrey">
+
+        <EditText
+            android:id="@+id/home_search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_search_inputbox"
+            android:drawableLeft="@drawable/bar_search_normal"
+            android:hint="请输入关键字"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/black"
+            android:textColorHint="@color/textGray" />
+
+        <Button
+            android:id="@+id/home_search_btn"
+            android:layout_width="72dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/home_search_btn"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/homefrag_viewpager_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/home_ll_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"></LinearLayout>
+
+    </RelativeLayout>
+    <!-- 按钮限时抢购 -->
+    <RelativeLayout
+        android:id="@+id/rl_xsqg"
+        style="@style/home_style_RelativeLayout">
+
+        <ImageView
+            style="@style/home_style_icon"
+            android:src="@drawable/selector_home_classify_01" />
+
+        <TextView
+            style="@style/home_style_text"
+            android:text="限时抢购" />
+
+        <ImageView style="@style/home_style_anrrow" />
+    </RelativeLayout>
+    <!-- 按钮促销快报 -->
+    <RelativeLayout
+        android:id="@+id/rl_cxkb"
+        style="@style/home_style_RelativeLayout">
+
+        <ImageView
+            style="@style/home_style_icon"
+            android:src="@drawable/selector_home_classify_02" />
+
+        <TextView
+            style="@style/home_style_text"
+            android:text="促销快报" />
+
+        <ImageView style="@style/home_style_anrrow" />
+    </RelativeLayout>
+
+    <!-- 按钮新品上架 -->
+    <RelativeLayout
+        android:id="@+id/rl_xpsj"
+        style="@style/home_style_RelativeLayout">
+
+        <ImageView
+            style="@style/home_style_icon"
+            android:src="@drawable/selector_home_classify_03" />
+
+        <TextView
+            style="@style/home_style_text"
+            android:text="新品上架" />
+
+        <ImageView style="@style/home_style_anrrow" />
+    </RelativeLayout>
+
+    <!-- 按钮热门单品 -->
+    <RelativeLayout
+        android:id="@+id/rl_rmdp"
+        style="@style/home_style_RelativeLayout">
+
+        <ImageView
+            style="@style/home_style_icon"
+            android:src="@drawable/selector_home_classify_04" />
+
+        <TextView
+            style="@style/home_style_text"
+            android:text="热门单品" />
+
+        <ImageView style="@style/home_style_anrrow" />
+    </RelativeLayout>
+
+    <!-- 按钮推荐品牌 -->
+    <RelativeLayout
+        android:id="@+id/rl_tjpp"
+        style="@style/home_style_RelativeLayout">
+
+        <ImageView
+            style="@style/home_style_icon"
+            android:src="@drawable/selector_home_classify_05" />
+
+        <TextView
+            style="@style/home_style_text"
+            android:text="推荐品牌" />
+
+        <ImageView style="@style/home_style_anrrow" />
+
+    </RelativeLayout>
+</LinearLayout>

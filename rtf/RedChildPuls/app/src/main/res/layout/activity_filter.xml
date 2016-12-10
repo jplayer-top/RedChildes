@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.oblivion.redchildpuls.activity.FilterActivity">
+
+    <com.oblivion.redchildpuls.view.MyTitleBar
+        android:id="@+id/mtb_filter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:isFilter="true" >
+    </com.oblivion.redchildpuls.view.MyTitleBar>
+
+    <ListView
+        android:id="@+id/lv_filter_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#FD6E6E"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.oblivion.redchildpuls.view.MyTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:isBackup="false"
+        app:titleText="搜索"></com.oblivion.redchildpuls.view.MyTitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/backgroundGrey">
+
+        <EditText
+            android:id="@+id/home_search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_search_inputbox"
+            android:drawableLeft="@drawable/bar_search_normal"
+            android:hint="请输入关键字"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/textGray" />
+
+        <Button
+            android:id="@+id/home_search_btn"
+            android:layout_width="72dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/home_search_btn"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="@drawable/search_titlebar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门搜索"/>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/arrow1"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/search_lv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:divider="@color/red"
+        android:dividerHeight="1dp"
+        ></ListView>
+
+    <FrameLayout
+        android:background="@drawable/search_titlebar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索历史"/>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/arrow1"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+    </FrameLayout>
+    <ListView
+        android:id="@+id/search_lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/red"
+        android:dividerHeight="1dp"></ListView>
+</LinearLayout>

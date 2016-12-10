@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:descendantFocusability="blocksDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   android:background="@drawable/order_list_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="订单详情 :"
+            style="@style/order_list_fix_text" />
+        <TextView
+            android:textColor="@color/textGray"
+            android:id="@+id/tv_order_number"
+            android:text="222222222222222"
+            style="@style/order_list_active_text" />
+    </LinearLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/textGray"
+            android:id="@+id/tv_fix_money"
+            android:text="订单金额 :"
+            style="@style/order_list_fix_text" />
+        <TextView
+            android:textColor="@color/textGray"
+            android:layout_toRightOf="@id/tv_fix_money"
+            android:id="@+id/tv_order_money"
+            android:text="￥194.00"
+           style="@style/order_list_active_text" />
+        <TextView
+            android:layout_toRightOf="@id/tv_order_money"
+            android:id="@+id/tv_fix_state"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:text="状态 :"
+            style="@style/order_list_fix_text" />
+        <TextView
+            android:textColor="@color/textGray"
+            android:layout_toRightOf="@id/tv_fix_state"
+            android:id="@+id/tv_order_state"
+            android:text="未确认"
+            style="@style/order_list_active_text" />
+        <ImageButton
+            android:focusable="false"
+            android:id="@+id/bt_order_next"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/select_order_next"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="提交时间 :"
+           style="@style/order_list_fix_text" />
+        <TextView
+            android:textColor="@color/textGray"
+            android:id="@+id/tv_order_time"
+            android:text="2016/12/4 17:18:25"
+           style="@style/order_list_active_text" />
+    </LinearLayout>
+
+</LinearLayout>

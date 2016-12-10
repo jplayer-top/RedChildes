@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.oblivion.redchildpuls.activity.OrderDetailActivity">
+<com.oblivion.redchildpuls.view.MyTitleBar
+    android:layout_margin="3dp"
+    android:id="@+id/order_detail_title"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:isBackup="false"
+    app:isMenu="true"
+    app:titleText="我的订单"
+    >
+</com.oblivion.redchildpuls.view.MyTitleBar>
+    <ScrollView
+        android:layout_below="@id/order_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/logistics_button"
+    android:layout_margin="3dp"
+    android:background="@drawable/order_list_bg"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+        android:textColor="#000"
+        android:layout_centerVertical="true"
+        android:text="物流查询"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/select_order_next"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+</RelativeLayout>
+<TextView
+    android:layout_marginBottom="3dp"
+    android:layout_below="@id/logistics_button"
+    android:id="@+id/title_orderinfo"
+    android:textSize="20sp"
+    android:textColor="#000"
+    android:layout_marginLeft="15dp"
+    android:text="订单收货信息"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+                                  <!--//////////////订单收货信息////////////-->
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:background="@drawable/order_list_bg"
+        android:layout_below="@id/title_orderinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="订单号 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:id="@+id/tv_order_detail_number_net"
+                android:text="1091438291312"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <TextView
+            android:text="收货地址 :"
+            style="@style/order_title_2" />
+        <TextView
+            android:id="@+id/tv_order_detail_name_net"
+            android:text="张三"
+            style="@style/order_content_2" />
+        <TextView
+            android:id="@+id/tv_order_detail_phone_net"
+            android:text="1345555555"
+            style="@style/order_content_2" />
+        <TextView
+            android:id="@+id/tv_order_detail_address_net"
+            android:maxLines="3"
+            android:text="地址三笠团放大答复大的打算 的阿达打算阿三倒萨打飞机是到付的接口撒范德萨尽快立法的就是咯浪费"
+            style="@style/order_content_2" />
+    </LinearLayout>
+   <TextView
+       android:text="订单详情"
+     style="@style/order_title_2"/>
+                            <!--//////////////订单详情////////////-->
+    <LinearLayout
+        android:visibility="visible"
+        android:background="@drawable/order_list_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:text="订单状态 :"
+            style="@style/order_title_2" />
+        <TextView
+            android:text="送达状态 orderstate"
+            android:id="@+id/tv_order_detail_orderstate_net"
+            style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="送货方式 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="快递deliverytype"
+                android:id="@+id/tv_order_detail_deliverytype_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="支付方式 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="货到付款现金支付"
+                android:id="@+id/tv_order_detail_paytype_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="订单生成时间 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="2012121212"
+                android:id="@+id/tv_order_detail_ordertime_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="发货时间 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="2012121212"
+                android:id="@+id/tv_order_detail_deliverytime_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="是否开具发票 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="是"
+                android:id="@+id/tv_order_detail_isinvoice_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_order_title_invoicetitle"
+                android:text="发票抬头 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:layout_alignRight="@id/tv_order_title_invoicetitle"
+                android:text="XXXXXXX文化传播发展公司"
+                android:id="@+id/tv_order_detail_invoicetitle_net"
+                style="@style/order_content_1"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="送货要求 :"
+                style="@style/order_title_2" />
+            <TextView
+                android:text="周一至周五送货"
+                android:id="@+id/tv_order_detail_deliveryinfo_net"
+                style="@style/order_content_1" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/segment_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:text="商品清单"
+        style="@style/order_title_2" />
+    </LinearLayout>
+    <!--待替换的  noScroll ListView-->
+    <com.oblivion.redchildpuls.view.NoScorllListView
+        android:id="@+id/lv_order_detail_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.oblivion.redchildpuls.view.NoScorllListView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/segment_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="数量总计 :"
+            style="@style/order_title_2"/>
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="1"
+                android:id="@+id/tv_order_detail_product_list_number_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15sp"/>
+            <TextView
+                android:text="件"
+                style="@style/order_title_2" />
+        </LinearLayout>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="商品金额 :"
+                style="@style/order_title_2"/>
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="￥"
+                    style="@style/order_title_2" />
+                <TextView
+                    android:text="3000"
+                    android:id="@+id/tv_order_detail_product_list_totalprice_net"
+                    style="@style/order_title_2"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="运费 :"
+                style="@style/order_title_2"/>
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="￥"
+                    style="@style/order_title_2" />
+                <TextView
+                    android:text="10"
+                    android:id="@+id/tv_order_detail_product_list_freight_net"
+                    style="@style/order_title_2"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="应支付金额"
+                style="@style/order_title_2"/>
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="￥"
+                    style="@style/order_title_2" />
+                <TextView
+                    android:text="3010"
+                    android:id="@+id/tv_order_detail_product_list_bill_net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="15dp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_order_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/product_detail_shop_normal"
+            android:text="取消订单"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

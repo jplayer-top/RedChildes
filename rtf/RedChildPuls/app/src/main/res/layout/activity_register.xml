@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/login_icon"
+              android:orientation="vertical">
+    <!--<TextView
+        android:gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册用户"
+        android:textSize="28sp"/>-->
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/register_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="用户名/手机号码"
+            android:textColorHint="#fff"
+            android:textColor="#FFFFFF"/>
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:textColorHint="#fff"
+            android:textColor="#FFFFFF"/>
+        <EditText
+            android:id="@+id/register_passwords"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="确认密码"
+            android:textColorHint="#fff"
+            android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/register_register"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="注册登陆 "
+                android:textColor="@drawable/login_register"
+                android:background="@drawable/button_login"/>
+        </LinearLayout>
+</RelativeLayout>

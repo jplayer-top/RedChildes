@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:gravity="center"
+              android:orientation="vertical"
+              android:theme="@style/ThemeOverlay.AppCompat.Dark"
+              android:padding="80dp"
+              android:background="@drawable/redbaby"
+              android:layout_height="105dp"
+              android:layout_width="match_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+</LinearLayout>
+

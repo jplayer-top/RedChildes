@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/main_usercenter"
+            android:title="账户中心"/>
+        <item
+            android:id="@+id/main_browse"
+            android:title="订单中心" />
+        <item
+            android:id="@+id/main_site"
+            android:title="地址管理"/>
+        <item
+            android:id="@+id/main_collect"
+            android:title="收藏记录"/>
+        <item
+            android:id="@+id/main_help"
+            android:title="帮助中心" />
+        <item
+            android:id="@+id/main_feedback"
+            android:title="用户反馈" />
+        <item
+            android:id="@+id/main_redbaby"
+            android:title="关于红孩子" />
+        <item
+            android:id="@+id/main_quit"
+            android:title="退出当前用户"/>
+    </group>
+
+</menu>

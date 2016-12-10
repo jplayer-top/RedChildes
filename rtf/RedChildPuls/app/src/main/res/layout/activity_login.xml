@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/login_icon"
+                tools:context=".activity.SplashActivity">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="欢迎来到红孩子商城"
+            android:textColor="#FF6666"
+            android:textSize="28sp" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>;-->
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="用户名/手机号码"
+                android:text="123"
+                android:textColorHint="#fff"
+                android:textColor="#FFFFFF"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>-->
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密码"
+                android:textColorHint="#fff"
+                android:inputType="textPassword"
+                android:text="123"
+                android:textColor="#FFFFFF"/>
+
+            <CheckBox
+                android:id="@+id/login_checkbox"
+                android:layout_gravity="right|center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login_register"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginRight="78dp"
+            android:text="登录"
+            android:background="@drawable/button_login"
+            android:textColor="@drawable/login_register"
+            android:textSize="18sp"/>
+    </LinearLayout>
+        <!--<Button-->
+            <!--android:id="@+id/login_ce"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="78sp"-->
+            <!--android:layout_marginRight="78sp"-->
+            <!--android:text="ceshi"-->
+            <!--android:textColor="@drawable/login_register"-->
+            <!--android:textSize="18sp"/>-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+        android:text="忘记密码?"
+        android:textColor="@drawable/login_forgetpassword" />
+
+    <TextView
+        android:onClick="newuesrname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="14dp"
+        android:text="注册用户"
+        android:textColor="@drawable/login_registerusername" />
+
+</RelativeLayout>

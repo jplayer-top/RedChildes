@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_41bg_normal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:scaleType="fitXY"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#9999"
+        android:padding="1dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv"
+        android:layout_toRightOf="@+id/iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/iv"
+            android:textColor="#aa000000"
+            android:textSize="20dp"
+            android:text="商品的名字"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_huiyuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/iv"
+                android:layout_marginTop="8dp"
+                android:text="商品的价格"
+                android:textColor="#f00"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/iv"
+                android:layout_marginTop="8dp"
+                android:text="    "
+                android:textColor="#f00"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:textColor="#88000000"
+                android:id="@+id/feihuiyuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/iv"
+                android:layout_marginTop="10dp"
+                android:text="非会员价格"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
